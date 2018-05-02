@@ -4,15 +4,15 @@ using System.Windows.Forms;
 
 namespace ColorScanner
 {
-    public partial class InstructionsDialog : Form
+    public partial class TeleportConfigurationDialog : Form
     {
         private bool recordingActive = false;
 
-        public InstructionsDialog()
+        public TeleportConfigurationDialog()
         {
             InitializeComponent();
 
-            HookManager.MouseDown += HandleMouseDown;
+            HookManager.KeyUp += HandleKeyUp;
         }
 
         private void startButton_Click(object sender, EventArgs e)
@@ -20,17 +20,23 @@ namespace ColorScanner
             recordingActive = true;
         }
 
-        private void HandleMouseDown(object sender, MouseEventArgs e)
+        private void HandleKeyUp(object sender, KeyEventArgs e)
         {
             if (!recordingActive)
             {
                 return;
             }
 
+            if (e.KeyCode != Keys.Enter)
+            {
+                return;
+            }
+
             recordingActive = false;
 
-            ColorScannerMainForm.teleportX = e.X;
-            ColorScannerMainForm.teleportY = e.Y;
+            ColorScannerMainForm.teleportX = Cursor.Position.X;
+            ColorScannerMainForm.teleportY = Cursor.Position.Y;
+            ColorScannerMainForm.teleportCoordsActive = true;
 
             var confirmationMessage = "Coordinates have been successfully saved.";
             var confirmationCaption = "Success";

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
@@ -25,58 +26,33 @@ namespace ColorScanner
         private bool playbackActive = false;
         private BackgroundWorker playbackThread = new BackgroundWorker();
 
-        private Color agilityObstacleColor;
-        private int agilityObstacleArgb;
-
+        public static int agilityObstacleArgb;
         public static int teleportX;
         public static int teleportY;
+
+        public static bool obstacleColorActive = false;
+        public static bool teleportCoordsActive = false;
 
         public ColorScannerMainForm()
         {
             InitializeComponent();
-
-            var colorFromHex = ColorTranslator.FromHtml("#969618");
-            agilityObstacleColor = Color.FromArgb(255, colorFromHex.R, colorFromHex.G, colorFromHex.B);
-            agilityObstacleArgb = agilityObstacleColor.ToArgb();
-
+            
             playbackThread.DoWork += MainLoop;
             playbackThread.WorkerSupportsCancellation = true;
 
             HookManager.KeyDown += HandleKeyDown;
         }
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            DisplayInstructions();
-            RetrieveTeleportCoords();
-
-            playbackThread.RunWorkerAsync();
-        }
-
-        private void DisplayInstructions()
-        {
-            var instructionsMessage = @"For this program to work correctly, please set up the following:
-
-Set Agility in OSBuddy to ON
-Set Agility ""Obstacle color"" to #ffff29
-Set Agility ""Warning color"" to #ffff29
-Set Agility ""Mark entire clickable area"" to ON
-Set Agility ""Fill area"" to ON
-
-Set ""Disable 3d rendering"" to OFF
-
-Open up the spell book tab";
-
-            var instructionsCaption = "Instructions";
-            var instructionsButtons = MessageBoxButtons.OK;
-
-            MessageBox.Show(instructionsMessage, instructionsCaption, instructionsButtons);
-        }
-
         private void RetrieveTeleportCoords()
         {
-            var form = new InstructionsDialog();
-            form.ShowDialog();
+            var teleportConfigurationDialog = new TeleportConfigurationDialog();
+            teleportConfigurationDialog.ShowDialog();
+        }
+
+        private void RetrieveObstacleColor()
+        {
+            var obstacleColorConfigurationDialog = new ObstacleColorConfigurationDialog();
+            obstacleColorConfigurationDialog.ShowDialog();
         }
 
         private void MainLoop(object sender, DoWorkEventArgs e)
@@ -188,24 +164,30 @@ Open up the spell book tab";
             return screenPixel.GetPixel(0, 0);
         }
 
-        private void stopButton_Click(object sender, EventArgs e)
+        private void pauseButton_Click(object sender, EventArgs e)
         {
-            PausePlayback();
+            StopPlayback();
         }
 
-        private void resumeButton_Click(object sender, EventArgs e)
-        {
-            ResumePlayback();
-        }
-
-        private void PausePlayback()
+        private void StopPlayback()
         {
             playbackActive = false;
             playbackThread.CancelAsync();
         }
 
-        private void ResumePlayback()
+        private void StartPlayback()
         {
+            if (!obstacleColorActive || !teleportCoordsActive)
+            {
+                var confirmationMessage = "Obstacle color or Teleport coordinates are not configured.";
+                var confirmationCaption = "Error";
+                var confirmationButtons = MessageBoxButtons.OK;
+
+                MessageBox.Show(confirmationMessage, confirmationCaption, confirmationButtons);
+
+                return;
+            }
+
             playbackActive = true;
             playbackThread.RunWorkerAsync();
         }
@@ -215,12 +197,27 @@ Open up the spell book tab";
             switch (e.KeyCode)
             {
                 case Keys.F1:
-                    PausePlayback();
+                    StartPlayback();
                     return;
                 case Keys.F2:
-                    ResumePlayback();
+                    StopPlayback();
                     return;
             }
+        }
+
+        private void configureObstacleColor_Click(object sender, EventArgs e)
+        {
+            RetrieveObstacleColor();
+        }
+
+        private void configureTeleportButton_Click(object sender, EventArgs e)
+        {
+            RetrieveTeleportCoords();
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            StartPlayback();
         }
     }
 }

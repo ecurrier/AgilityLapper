@@ -21,3 +21,11 @@ C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScan
 C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.exe.config
 C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.exe
 C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.pdb
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.exe
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.pdb
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.csprojResolveAssemblyReference.cache
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.ColorScannerMainForm.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.TeleportConfigurationDialog.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.Properties.Resources.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.csproj.GenerateResource.Cache
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.ObstacleColorConfigurationDialog.resources

@@ -59,11 +59,17 @@
     <Compile Include="HookManager.cs" />
     <Compile Include="HookManager.Structures.cs" />
     <Compile Include="HookManager.Windows.cs" />
-    <Compile Include="InstructionsDialog.cs">
+    <Compile Include="ObstacleColorConfigurationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InstructionsDialog.Designer.cs">
-      <DependentUpon>InstructionsDialog.cs</DependentUpon>
+    <Compile Include="ObstacleColorConfigurationDialog.Designer.cs">
+      <DependentUpon>ObstacleColorConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeleportConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeleportConfigurationDialog.Designer.cs">
+      <DependentUpon>TeleportConfigurationDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="MouseEventExtArgs.cs" />
     <Compile Include="Program.cs" />
@@ -71,8 +77,11 @@
     <EmbeddedResource Include="ColorScannerMainForm.resx">
       <DependentUpon>ColorScannerMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InstructionsDialog.resx">
-      <DependentUpon>InstructionsDialog.cs</DependentUpon>
+    <EmbeddedResource Include="ObstacleColorConfigurationDialog.resx">
+      <DependentUpon>ObstacleColorConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeleportConfigurationDialog.resx">
+      <DependentUpon>TeleportConfigurationDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
