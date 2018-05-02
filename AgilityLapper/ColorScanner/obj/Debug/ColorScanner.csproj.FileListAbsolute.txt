@@ -1,0 +1,23 @@
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\bin\Debug\ColorScanner.exe.config
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.csprojResolveAssemblyReference.cache
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.Properties.Resources.resources
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.csproj.GenerateResource.Cache
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\bin\Debug\ColorScanner.exe
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\bin\Debug\ColorScanner.pdb
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.exe
+c:\users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.pdb
+C:\Users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.ColorScannerMainForm.resources
+C:\Users\ecurri3\documents\visual studio 2015\Projects\ColorScanner\ColorScanner\obj\Debug\ColorScanner.InstructionsDialog.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.exe.config
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.exe
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.pdb
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.exe
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.pdb
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.csprojResolveAssemblyReference.cache
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.ColorScannerMainForm.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.InstructionsDialog.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.Properties.Resources.resources
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.csproj.GenerateResource.Cache
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\bin\Debug\ColorScanner.exe.config
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.exe
+C:\Users\ecurri3\Documents\GitHub\AgilityLapper\AgilityLapper\ColorScanner\obj\Debug\ColorScanner.pdb
