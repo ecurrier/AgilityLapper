@@ -32,6 +32,12 @@
             this.pauseButton = new System.Windows.Forms.Button();
             this.configureObstacleColor = new System.Windows.Forms.Button();
             this.startButton = new System.Windows.Forms.Button();
+            this.teleportCoordinatesLabel = new System.Windows.Forms.Label();
+            this.obstacleColorLabel = new System.Windows.Forms.Label();
+            this.lastClickCoordinateLabel = new System.Windows.Forms.Label();
+            this.teleportCoordinatesValue = new System.Windows.Forms.Label();
+            this.obstacleColorValue = new System.Windows.Forms.Label();
+            this.lastClickCoordinatesValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // configureTeleportButton
@@ -74,11 +80,68 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
+            // teleportCoordinatesLabel
+            // 
+            this.teleportCoordinatesLabel.AutoSize = true;
+            this.teleportCoordinatesLabel.Location = new System.Drawing.Point(14, 105);
+            this.teleportCoordinatesLabel.Name = "teleportCoordinatesLabel";
+            this.teleportCoordinatesLabel.Size = new System.Drawing.Size(108, 13);
+            this.teleportCoordinatesLabel.TabIndex = 5;
+            this.teleportCoordinatesLabel.Text = "Teleport Coordinates:";
+            // 
+            // obstacleColorLabel
+            // 
+            this.obstacleColorLabel.AutoSize = true;
+            this.obstacleColorLabel.Location = new System.Drawing.Point(14, 128);
+            this.obstacleColorLabel.Name = "obstacleColorLabel";
+            this.obstacleColorLabel.Size = new System.Drawing.Size(79, 13);
+            this.obstacleColorLabel.TabIndex = 6;
+            this.obstacleColorLabel.Text = "Obstacle Color:";
+            // 
+            // lastClickCoordinateLabel
+            // 
+            this.lastClickCoordinateLabel.AutoSize = true;
+            this.lastClickCoordinateLabel.Location = new System.Drawing.Point(14, 150);
+            this.lastClickCoordinateLabel.Name = "lastClickCoordinateLabel";
+            this.lastClickCoordinateLabel.Size = new System.Drawing.Size(115, 13);
+            this.lastClickCoordinateLabel.TabIndex = 7;
+            this.lastClickCoordinateLabel.Text = "Last Click Coordinates:";
+            // 
+            // teleportCoordinatesValue
+            // 
+            this.teleportCoordinatesValue.AutoSize = true;
+            this.teleportCoordinatesValue.Location = new System.Drawing.Point(128, 105);
+            this.teleportCoordinatesValue.Name = "teleportCoordinatesValue";
+            this.teleportCoordinatesValue.Size = new System.Drawing.Size(0, 13);
+            this.teleportCoordinatesValue.TabIndex = 8;
+            // 
+            // obstacleColorValue
+            // 
+            this.obstacleColorValue.AutoSize = true;
+            this.obstacleColorValue.Location = new System.Drawing.Point(99, 128);
+            this.obstacleColorValue.Name = "obstacleColorValue";
+            this.obstacleColorValue.Size = new System.Drawing.Size(0, 13);
+            this.obstacleColorValue.TabIndex = 9;
+            // 
+            // lastClickCoordinatesValue
+            // 
+            this.lastClickCoordinatesValue.AutoSize = true;
+            this.lastClickCoordinatesValue.Location = new System.Drawing.Point(135, 150);
+            this.lastClickCoordinatesValue.Name = "lastClickCoordinatesValue";
+            this.lastClickCoordinatesValue.Size = new System.Drawing.Size(0, 13);
+            this.lastClickCoordinatesValue.TabIndex = 10;
+            // 
             // ColorScannerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(308, 96);
+            this.ClientSize = new System.Drawing.Size(308, 177);
+            this.Controls.Add(this.lastClickCoordinatesValue);
+            this.Controls.Add(this.obstacleColorValue);
+            this.Controls.Add(this.teleportCoordinatesValue);
+            this.Controls.Add(this.lastClickCoordinateLabel);
+            this.Controls.Add(this.obstacleColorLabel);
+            this.Controls.Add(this.teleportCoordinatesLabel);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.configureObstacleColor);
             this.Controls.Add(this.pauseButton);
@@ -87,6 +150,7 @@
             this.Text = "Agility Lapper";
             this.TopMost = true;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -96,6 +160,12 @@
         private System.Windows.Forms.Button pauseButton;
         private System.Windows.Forms.Button configureObstacleColor;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.Label teleportCoordinatesLabel;
+        private System.Windows.Forms.Label obstacleColorLabel;
+        private System.Windows.Forms.Label lastClickCoordinateLabel;
+        private System.Windows.Forms.Label teleportCoordinatesValue;
+        private System.Windows.Forms.Label obstacleColorValue;
+        private System.Windows.Forms.Label lastClickCoordinatesValue;
     }
 }
 

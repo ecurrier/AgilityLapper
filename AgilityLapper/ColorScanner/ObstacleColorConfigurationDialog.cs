@@ -41,6 +41,8 @@ namespace ColorScanner
             recordingActive = false;
 
             var color = GetColorAtCursor(new Point(Cursor.Position.X, Cursor.Position.Y));
+
+            ColorScannerMainForm.agilityObstacleHex = $"#{color.R.ToString("X2")}{color.G.ToString("X2")}{color.B.ToString("X2")}";
             ColorScannerMainForm.agilityObstacleArgb = color.ToArgb();
             ColorScannerMainForm.obstacleColorActive = true;
 

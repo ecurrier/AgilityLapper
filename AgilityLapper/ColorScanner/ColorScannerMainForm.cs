@@ -5,7 +5,6 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
@@ -26,6 +25,7 @@ namespace ColorScanner
         private bool playbackActive = false;
         private BackgroundWorker playbackThread = new BackgroundWorker();
 
+        public static string agilityObstacleHex;
         public static int agilityObstacleArgb;
         public static int teleportX;
         public static int teleportY;
@@ -140,6 +140,10 @@ namespace ColorScanner
                 return;
             }
 
+            Invoke((MethodInvoker)delegate {
+                lastClickCoordinatesValue.Text = $"X: {point.Value.X} Y: {point.Value.Y}";
+            });
+
             mouse_event(MOUSEEVENTF_LEFTDOWN, Cursor.Position.X, Cursor.Position.Y, 0, 0);
             mouse_event(MOUSEEVENTF_LEFTUP, Cursor.Position.X, Cursor.Position.Y, 0, 0);
 
@@ -171,12 +175,22 @@ namespace ColorScanner
 
         private void StopPlayback()
         {
+            if (!playbackActive)
+            {
+                return;
+            }
+
             playbackActive = false;
             playbackThread.CancelAsync();
         }
 
         private void StartPlayback()
         {
+            if (playbackActive)
+            {
+                return;
+            }
+
             if (!obstacleColorActive || !teleportCoordsActive)
             {
                 var confirmationMessage = "Obstacle color or Teleport coordinates are not configured.";
@@ -187,6 +201,9 @@ namespace ColorScanner
 
                 return;
             }
+
+            teleportCoordinatesValue.Text = $"X: {teleportX} Y: {teleportY}";
+            obstacleColorValue.Text = $"{agilityObstacleHex}";
 
             playbackActive = true;
             playbackThread.RunWorkerAsync();
